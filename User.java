@@ -1,4 +1,4 @@
-public class User {
+public abstract class User {
         private String name;
         private String id;
         private double salary;
@@ -27,9 +27,10 @@ public class User {
         public void setSalary(double salary){
             this.salary = salary;
         }
-        public double getBono(){
+        public abstract double getBono();
+        // public double getBono(){
             // If type = 1 is manager. If type 0 is user;
-            return this.salary * 0.1;
+            // return this.salary * 0.1;
             // if(this.type == 0){
             //     return this.salary * 0.1 + this.salary;
             // }
@@ -39,7 +40,7 @@ public class User {
             // else{
             //     return 0;
             // }
-        }
+        // }
             public int getType(){
                 return type;
             }

@@ -10,6 +10,7 @@ public class ManagerTest {
         // john.setType(0);
         System.out.println(john.login("keyword"));
         // System.out.println(john.getBono());
+        System.out.println(john.getSalary());
         System.out.println(john.getBono());
     }
 }

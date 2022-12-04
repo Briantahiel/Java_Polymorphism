@@ -7,6 +7,6 @@ public class Manager extends User{
         return keyString == "keyword";
     }
     public double getBono(){
-        return super.getSalary() + super.getBono();
+        return super.getSalary() + this.getSalary() * 0.05;
     }
 }
