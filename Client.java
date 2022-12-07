@@ -1,7 +1,9 @@
-public class Client {
+public class Client implements UserAuthenticate{
     private String name;
     private String id;
     private String telephone;
+
+    private String keyword;
     
     public String getName(){
         return name;
@@ -21,4 +23,20 @@ public class Client {
     public void setTelehone(String telephone){
         this.telephone = telephone;
     }
+    public double getBono(){
+        return 200;
+    }
+
+    public boolean login(String keyString) {
+        if(this.keyword == keyString){
+            return true;
+        }
+        return false;
+    }
+    
+    public void setKeyword(String keywordString){
+        this.keyword = keywordString;
+    }
+    
+    
 }
