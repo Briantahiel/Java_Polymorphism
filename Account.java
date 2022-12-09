@@ -4,7 +4,7 @@ public abstract class Account {
     private int number;
     private Client owner = new Client();
 
-    private static int total = 0;
+    private static int total;
 
     public Account(int agency, int number){
         if(agency <= 0){

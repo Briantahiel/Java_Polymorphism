@@ -3,7 +3,13 @@ public class Client implements UserAuthenticate{
     private String id;
     private String telephone;
 
+    private Authentication util;
+
     private String keyword;
+
+    public Client(){
+        this.util = new Authentication();
+    }
     
     public String getName(){
         return name;
@@ -28,14 +34,10 @@ public class Client implements UserAuthenticate{
     }
 
     public boolean login(String keyString) {
-        if(this.keyword == keyString){
-            return true;
+        return this.util.login(keyword);
         }
-        return false;
-    }
-    
     public void setKeyword(String keywordString){
-        this.keyword = keywordString;
+        this.setKeyword(keyword);
     }
     
     

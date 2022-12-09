@@ -1,14 +1,15 @@
 public class Administrator extends User implements UserAuthenticate{
 
-    private String keyword;
+    private Authentication util;
+
+    public Administrator(){
+        this.util = new Authentication();
+    }
     public void setKeyword(String keyword){
-        this.keyword = keyword;
+        this.util.setKeyword(keyword);
     }
     public boolean login(String keyString){
-        if(this.keyword == keyString){
-            return true;
-        }
-        return this.keyword == keyString;
+        return this.util.login(keyString);
     }
 
     @Override
